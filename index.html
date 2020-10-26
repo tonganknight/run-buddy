@@ -49,9 +49,9 @@
     </header>
 
     <!--Hero Element-->
-    <section>
+    <section class="hero">
 
-        <div>
+        <div class="hero-form">
 
             <h3>Get Started Today</h3> 
 
@@ -60,31 +60,45 @@
         <!--Add form element-->
             <formm>
 
+
                 <label for="name"> Enter full name:</label>
 
-                <input type="text" placeholder=" Your Name" name="name" id="name" />
+
+                <input type="text" placeholder=" Your Name" name="name" id="name" class="form-input">
+
 
                 <label for="email">Enter email address:</label>
 
-                <input type="email" placeholder="Email Address" name="email" id="email" required/>
+
+                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input">
+
 
                 <label for="phone"> Enter a telephone number:</label>
 
-                <input type="tel" placeholder=" Phone Number" name="phone" id="phone"/>
+
+                <input type="tel" placeholder=" Phone Number" name="phone" id="phone"class="form-input">
+
 
              <p>
+
+
                     Have you worked out with a trainer before?
                     <input type="radio" name="trainer-confirm" id="traainer-yes" />
+
                 
-                    <lebel for="trainer-yes">Yes</lebel>
+                    <label for="trainer-yes">Yes</label>
+
                 
                     <input type="radio" name="trainer-confirm" id="trainer-no" />
 
+
                     <label for="trainer-no">No</label>
 
-             </p>
+            </p>
 
              <p>
+                    
+
                     <label for="checkbox" >
 
                     I acknowlege that I am at least 18 years of age.
@@ -95,10 +109,9 @@
 
             </p>
 
-                <button type="submit"> 
-                    Get running!
 
-                </button>
+                <button type="submit">Get running!</button>
+
 
             </formm>
 
