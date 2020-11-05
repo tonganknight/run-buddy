@@ -13,7 +13,15 @@ header {
     background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
-    flex-wrap:  wrap;}
+    flex-wrap:  wrap;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    Background-attachment: fixed;
+    background-position: 80%;}
 
 header h1 {
     font-weight: bold;
@@ -41,6 +49,12 @@ header nav ul{
      padding: 10px 15px;
      font-weight: lighter;
      font-size: 1.55vw}   
+
+header nav ul li a:hover{
+     background: #fce138;
+    color: #024e76;
+     border-radius: 15px;
+    text-shadow: none;}
 
 footer {
          background: #fce138;
@@ -73,7 +87,10 @@ footer a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start}
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+}
     
 .hero-cta {
     width: 35%;
@@ -87,6 +104,7 @@ footer a {
     font-style: italic;
     font-size:  55px;
     color:#fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .flex-row{
@@ -95,11 +113,12 @@ footer a {
 
 .hero-form{
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 0.8);
   padding: 20px;
   color: #024e76;
-  width: 40%;
-  margin: 3.5%}
+  width: 40%;;
+  margin: 3.5%;
+  border-radius: 15px;}
 
 .hero-form-h3{
     font-size: 24px;
@@ -118,14 +137,30 @@ footer a {
     font-size: 16px;
     color: 024e76;
     width: 100%;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 1);
+}
+
+.form-input:focus{
+    background-color: rgba(255,255,255, 1);
+    outline:none;
+}
+
+
 
     .hero-form button {
         color:#fce138;
         background-color: #024e76;
         border: none;
         padding: 10px 20px;
-        font-size: 16px;}
+        font-size: 16px;
+        border-radius: 10px;}
+
+.hero-form button:hover{
+      background-color: #39a6b2;
+      
+  }
 
 
 /*Hero style End*/
@@ -170,11 +205,14 @@ footer a {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.step:last-child {
+    border-bottom:1px solid #39a6b2;
 }
 
 .step-info{
@@ -316,6 +354,7 @@ footer a {
         width: 100%;
         margin-bottom: 15px;
         margin-top: 5px;
+        border-radius: 10px;
 }
 
 .contact-form button {
@@ -326,13 +365,35 @@ footer a {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-    
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 
 }
 
 .contact-info a {
     color:#fce138;
 }
+
+.contact-name:hover{ 
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
+
+.message{/* they called in contact-form input, .contact-form textarea*/
+    background-color: rgba(179, 223, 236, 0.85);
+    outline: none;
+}
+
+.message:focus{/* the called in contact-form iinput:focus, .contact-form textarea:focus*/
+    background-color: rgba(255,255,255, 1);
+    outline:none;
+}
+
+
 
 /*CSS Grid*/
 
@@ -397,99 +458,105 @@ footer a {
 @media screen and (max-width: 980px) {
     header{
         padding: bottom 0;justify-content: center;
-
-}
-
-header h1{ 
-    width:100%;
-    text-align: center;
-}
-
-header nav ul{
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
-
-}
-
-header nav ul li a{
-    font-size:20px;
-
-}
-
-footer h2, footer div{
-    text-align: center;
-    width: 100%;
-}
-
-.hero-cta, .hero-form{
-    width: 100%;
-}
-
-.hero-cta{ 
-    text-align: center;
-
-}
-
-.section-title {
-    text-align: center;
-    width: 80%;
-}
-
-.trainer {
-    flex: 0 70%;
-}
-
-.contact-info iframe{
-    flex: 1 100%;
-}}
-
-/*768*/
-@media screen and (max-width: 768px) {
-    section {
-        padding : 30px 15px;
+        position: relative;
     }
 
-    .step h3 {
-        flex: 1 100%;
+    header h1{ 
+        width:100%;
         text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
     }
 
-    .step-info{
-        flex: 2 100%;
-        text-align: center;
+    header nav ul{
+        margin-top: 20px;
+        width: 100%;
         justify-content: center;
+
     }
 
-    .step-img{
-        flex: 0 32%;
-        margin-right: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
+    header nav ul li a{
+        font-size:20px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
-    .step-text{
-        flex: 100%;
+    footer h2, footer div{
+        text-align: center;
+        width: 100%;
     }
 
-    .service-grid-container {
-        grid-template-columns: 1fr 1fr;
+    .hero-cta, .hero-form{
+        width: 100%;
     }
 
-    .service-grid-item.basic{
-        grid-column: 1;
+    .hero-cta{ 
+        text-align: center;
+
     }
 
-    .service-grid-item.both{
-        grid-column: 1 / -1;
+    .section-title {
+        text-align: center;
+        width: 80%;
     }
 
-    .service-grid-item.cancel {
-        transform: none;
-        writing-mode: unset;
-        grid-column: 1 / -1;
-        grid-row: -1;
-    } }
+    .trainer {
+        flex: 0 70%;
+    }
+
+    .contact-info iframe{
+        flex: 1 100%;
+    }
+
+}
+
+    /*768*/
+    @media screen and (max-width:768px) {
+        section {
+            padding : 30px 15px;
+        }
+
+        .step h3 {
+            flex: 1 100%;
+            text-align: center;
+        }
+
+        .step-info{
+            flex: 2 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .step-img{
+            flex: 0 32%;
+            margin-right: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-text{
+            flex: 100%;
+        }
+
+        .service-grid-container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .service-grid-item.basic{
+            grid-column: 1;
+        }
+
+        .service-grid-item.both{
+            grid-column: 1 / -1;
+        }
+
+        .service-grid-item.cancel {
+            transform: none;
+            writing-mode: unset;
+            grid-column: 1 / -1;
+            grid-row: -1;
+        } 
+    }
+
 
 
 
@@ -524,4 +591,4 @@ footer h2, footer div{
       .contact-form {
         order: 3;
       }
-    }
+}
